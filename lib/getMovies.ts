@@ -23,3 +23,44 @@ async function fetchFromTMDB(url: URL, cacheTime?: number) {
 
     return data;
 };
+
+export async function getUpcomingMovies() {
+    const url = new URL("https://api.themoviedb.org/3/movie/upcoming");
+    const data = await fetchFromTMDB(url);
+
+    return data.results;
+}
+
+export async function getTopRatedMovies() {
+    const url = new URL("https://api.themoviedb.org/3/movie/top_rated");
+    const data = await fetchFromTMDB(url);
+
+    return data.results;
+}
+
+export async function getPopularMovies() {
+    const url = new URL("https://api.themoviedb.org/3/movie/popular");
+    const data = await fetchFromTMDB(url);
+
+    return data.results;
+}
+
+export async function getDiscoverMovies( id?: string, keywords?: string ) {
+    const url = new URL("https://api.themoviedb.org/3/discover/movie");
+
+    // Assuming 'keywords' is another parameter that needs to be passed to the function
+    keywords && url.searchParams.set("with_keywords", keywords);
+    id && url.searchParams.set("with_genres", id);
+
+    // Call the fetchFromTMDB function with the constructed URL
+    const data = await fetchFromTMDB(url);
+    return data.results;
+}
+
+export async function getSearchMovies( term: string ) {
+    const url = new URL("https://api.themoviedb.org/3/search/movie");
+    
+    url.searchParams.set("query", term);
+    const data = await fetchFromTMDB(url);
+    return data.results;
+}
