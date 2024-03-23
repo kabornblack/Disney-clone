@@ -12,7 +12,7 @@
 ###### *AI Suggestion* : Utilizes Azure Functions to provide AI-generated suggestions based on user input.
 
 ## Technologies Used
-###### *REACT* : *Frontend library for building user interfaces.*
+###### *REACT & TYPESCRIPT* : *Frontend library for building user interfaces.*
 ###### *NEXT.JS* : React framework for server-rendered applications.
 ###### *SWR* : React Hooks library for data fetching.
 ###### *Tailwind CSS*: Utility-first CSS framework for styling.
