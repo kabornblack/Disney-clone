@@ -15,8 +15,9 @@
 ###### *REACT & TYPESCRIPT* : For building dynamic user interfaces.
 ###### *NEXT.JS* : Server-rendered applications.
 ###### *SWR* : React Hooks library for data fetching.
-###### *Tailwind CSS*: Utility-first CSS framework for styling.
-###### *Azure Functions* : AI suggestion functionality.
+###### *Tailwind CSS*: CSS Utility-classes for styling.
+###### *ShadCN*: Reuseable component
+###### *Azure Functions* : OpenAI and AI suggestion functionality.
 
 ## Usage
 To run the project locally:
